@@ -94,6 +94,12 @@
     <Filter Include="Src\Application\GameObject\Steage\Steage01">
       <UniqueIdentifier>{fee5e0f1-9647-44ea-b939-d47349b906ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\GameObject\Player">
+      <UniqueIdentifier>{62d33886-9dc0-4efa-987c-8087be250a72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\GameObject\Camera\TopDownCamera">
+      <UniqueIdentifier>{94ae839a-fe7b-454b-ad47-8e90438b8735}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -285,6 +291,12 @@
     <ClInclude Include="Src\Application\GameObject\Steage\Steage01\Steage01.h">
       <Filter>Src\Application\GameObject\Steage\Steage01</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\GameObject\Player\Player.h">
+      <Filter>Src\Application\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\GameObject\Camera\TopDownCamera\TopDownCamera.h">
+      <Filter>Src\Application\GameObject\Camera\TopDownCamera</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -445,6 +457,12 @@
     </ClCompile>
     <ClCompile Include="Src\Application\GameObject\Steage\Steage01\Steage01.cpp">
       <Filter>Src\Application\GameObject\Steage\Steage01</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\GameObject\Player\Player.cpp">
+      <Filter>Src\Application\GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\GameObject\Camera\TopDownCamera\TopDownCamera.cpp">
+      <Filter>Src\Application\GameObject\Camera\TopDownCamera</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

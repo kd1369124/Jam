@@ -39,7 +39,20 @@ public :
 	// 現在のシーンにオブジェクトを追加
 	void AddObject(const std::shared_ptr<KdGameObject>& _obj);
 
+	// スコア加算
+	void AddScore(int value) {
+		m_score += value;
+	}
+
+	// スコア取得
+	int GetScore() const {
+		return m_score;
+	}
+
+
 private :
+
+	int m_score = 0;
 
 	// マネージャーの初期化
 	// インスタンス生成(アプリ起動)時にコンストラクタで自動実行

@@ -275,7 +275,9 @@
     <ClInclude Include="..\Library\tinygltf\tiny_gltf.h" />
     <ClInclude Include="Src\Application\GameObject\Camera\CameraBase.h" />
     <ClInclude Include="Src\Application\GameObject\Camera\FPSCamera\FPSCamera.h" />
+    <ClInclude Include="Src\Application\GameObject\Camera\TopDownCamera\TopDownCamera.h" />
     <ClInclude Include="Src\Application\GameObject\Camera\TPSCamera\TPSCamera.h" />
+    <ClInclude Include="Src\Application\GameObject\Player\Player.h" />
     <ClInclude Include="Src\Application\GameObject\Steage\Steage01\Steage01.h" />
     <ClInclude Include="Src\Application\GameObject\Steage\SteageBase.h" />
     <ClInclude Include="Src\Application\GameObject\Treasure\Treasure.h" />
@@ -333,7 +335,9 @@
     <ClCompile Include="..\Library\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Src\Application\GameObject\Camera\CameraBase.cpp" />
     <ClCompile Include="Src\Application\GameObject\Camera\FPSCamera\FPSCamera.cpp" />
+    <ClCompile Include="Src\Application\GameObject\Camera\TopDownCamera\TopDownCamera.cpp" />
     <ClCompile Include="Src\Application\GameObject\Camera\TPSCamera\TPSCamera.cpp" />
+    <ClCompile Include="Src\Application\GameObject\Player\Player.cpp" />
     <ClCompile Include="Src\Application\GameObject\Steage\Steage01\Steage01.cpp" />
     <ClCompile Include="Src\Application\GameObject\Steage\SteageBase.cpp" />
     <ClCompile Include="Src\Application\GameObject\Treasure\Treasure.cpp" />

@@ -1,8 +1,7 @@
 ﻿#include "Treasure.h"
-
+#include"../../Scene/SceneManager.h"
 void Treasure::Init()
 {
-
 	m_spPoly = std::make_shared<KdPolygon>();
 	// 四角形の2トライアングル分の頂点
 	std::vector<KdPolygon::Vertex> verts(6);
@@ -23,28 +22,33 @@ void Treasure::Init()
 	m_pCollider = std::make_unique<KdCollider>();
 	if (m_pCollider)
 	{
-		m_pCollider->RegisterCollisionShape("ground",m_spPoly, KdCollider::TypeEvent);
+		m_pCollider->RegisterCollisionShape("ground", m_spPoly, KdCollider::TypeEvent);
 
 	}
-
-
-
 }
 
 void Treasure::Update()
 {
-	if (Scall < 10&&HitFlg)
+	/*if (GetAsyncKeyState('A')&0x80000)
+	{
+		HitOn();
+	}*/
+
+
+	if (Scall < 10 && HitFlg)
 	{
 		Scall += 0.1f;
+		m_pos.y += 0.1f;
 	}
-	Math::Matrix scal = Math::Matrix::CreateScale(0.3);
+	Math::Matrix scal = Math::Matrix::CreateScale(Scall);
+	Math::Matrix rollX = Math::Matrix::CreateRotationX(DirectX::XMConvertToRadians(90));
 	Math::Matrix transu = Math::Matrix::CreateTranslation(m_pos);
-	m_mWorld = scal * transu;
+	m_mWorld = scal * rollX * transu;
 }
 
 void Treasure::DrawLit()
 {
-	//if (HitFlg)
+	if (HitFlg)
 	{
 		KdShaderManager::Instance().m_StandardShader.DrawPolygon(*m_spPoly, m_mWorld);
 	
@@ -77,5 +81,10 @@ void Treasure::SetModel(int Num)
 
 void Treasure::HitOn()
 {
-	HitFlg = true;
+	if (!HitFlg)
+	{
+		HitFlg = true;
+		SceneManager::Instance().AddScore(10);
+		m_isExpired = true; // Treasureを消す
+	}
 }

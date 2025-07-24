@@ -9,16 +9,9 @@ public:
 
 	void Init() override;
 
-	void Update() override;
-
 	void DrawUnLit() override;
 
-
-
-
-
 private:
-
-	std::shared_ptr<Treasure> treasure;
+	std::shared_ptr<KdModelData> m_model = nullptr;
 
 };

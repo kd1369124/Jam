@@ -15,6 +15,8 @@ public:
 
 	void SetPos(const Math::Vector3& _pos)override { m_pos = _pos;}
 	void SetPosp(Math::Matrix _mat) { m_mWorld = _mat;}
+
+	bool IsOpen() const { return OpenFlb; }
 private:
 	
 
@@ -25,5 +27,5 @@ private:
 	Math::Vector3 m_pos;
 	std::shared_ptr<KdPolygon> m_spPoly = nullptr;//ポリゴンデータ
 
-
+	bool OpenFlb = false; //開いているかどうか
 };
